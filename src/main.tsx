@@ -10,3 +10,5 @@ const element = 'my-app';
 new Home().start(element, {route: '#, #Home'});
 new About().mount(element, {route: '#About'});
 new Contact().mount(element, {route: '#Contact'});
+
+if (!window.onpopstate) window.onhashchange = () => app.route(location.hash);
